@@ -11,6 +11,7 @@
 
 ## Rest API response in JSON
 
+url: http://localhost/api/invoices/1
 ```json
 
 {
