@@ -7,53 +7,115 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Rest API response in JSON
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+```json
 
-## Learning Laravel
+{
+    "model": {
+        "id": 1,
+        "number": "INV-20001",
+        "customer_id": 1,
+        "date": "2018-04-01",
+        "due_date": "2018-08-01",
+        "reference": "LPO #1",
+        "terms_and_conditions": "Commodi blanditiis sapiente quam nulla deleniti ut. Dolorem non eaque reiciendis qui tenetur.",
+        "sub_total": 1645,
+        "discount": 16,
+        "total": 1629,
+        "created_at": "2018-06-28 16:02:51",
+        "updated_at": "2018-06-28 16:02:51",
+        "customer": {
+            "id": 1,
+            "firstname": "Pearline",
+            "lastname": "Monahan",
+            "email": "qhermann@example.com",
+            "address": "6698 Noemy Causeway\nMoenmouth, KS 21630-4999",
+            "created_at": "2018-06-28 16:02:49",
+            "updated_at": "2018-06-28 16:02:49",
+            "text": "Pearline - Monahan"
+        },
+        "items": [
+            {
+                "id": 1,
+                "invoice_id": 1,
+                "product_id": 5,
+                "unit_price": 140,
+                "qty": 5,
+                "created_at": "2018-06-28 16:02:51",
+                "updated_at": "2018-06-28 16:02:51",
+                "product": {
+                    "id": 5,
+                    "item_code": "PDT-100014",
+                    "description": "Name Of Product14",
+                    "unit_price": 505,
+                    "created_at": "2018-06-28 16:02:47",
+                    "updated_at": "2018-06-28 16:02:47",
+                    "text": "PDT-100014 - Name Of Product14"
+                }
+            },
+            {
+                "id": 2,
+                "invoice_id": 1,
+                "product_id": 1,
+                "unit_price": 172,
+                "qty": 4,
+                "created_at": "2018-06-28 16:02:51",
+                "updated_at": "2018-06-28 16:02:51",
+                "product": {
+                    "id": 1,
+                    "item_code": "PDT-100010",
+                    "description": "Name Of Product10",
+                    "unit_price": 769,
+                    "created_at": "2018-06-28 16:02:46",
+                    "updated_at": "2018-06-28 16:02:46",
+                    "text": "PDT-100010 - Name Of Product10"
+                }
+            },
+            {
+                "id": 3,
+                "invoice_id": 1,
+                "product_id": 9,
+                "unit_price": 247,
+                "qty": 6,
+                "created_at": "2018-06-28 16:02:51",
+                "updated_at": "2018-06-28 16:02:51",
+                "product": {
+                    "id": 9,
+                    "item_code": "PDT-100018",
+                    "description": "Name Of Product18",
+                    "unit_price": 420,
+                    "created_at": "2018-06-28 16:02:47",
+                    "updated_at": "2018-06-28 16:02:47",
+                    "text": "PDT-100018 - Name Of Product18"
+                }
+            },
+            {
+                "id": 4,
+                "invoice_id": 1,
+                "product_id": 27,
+                "unit_price": 310,
+                "qty": 5,
+                "created_at": "2018-06-28 16:02:51",
+                "updated_at": "2018-06-28 16:02:51",
+                "product": {
+                    "id": 27,
+                    "item_code": "PDT-100036",
+                    "description": "Name Of Product36",
+                    "unit_price": 371,
+                    "created_at": "2018-06-28 16:02:48",
+                    "updated_at": "2018-06-28 16:02:48",
+                    "text": "PDT-100036 - Name Of Product36"
+                }
+            }
+        ]
+    }
+}
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+```
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
