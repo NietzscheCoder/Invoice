@@ -11,7 +11,7 @@
 
 ## Rest API response in JSON
 
-url: http://localhost/api/invoices/1
+Sample invoice api: http://localhost/api/invoices/1
 ```json
 
 {
@@ -116,6 +116,25 @@ url: http://localhost/api/invoices/1
 }
 
 ```
+Sample customer api: http://localhost/api/customers?q=1
+
+```json
+{
+    "results": [
+        {
+            "id": 24,
+            "firstname": "Yasmeen",
+            "lastname": "Smitham",
+            "email": "mose10@example.net",
+            "address": "3433 Wiza Parkway\nYundtport, VA 44960",
+            "created_at": "2018-06-28 16:02:50",
+            "updated_at": "2018-06-28 16:02:50",
+            "text": "Yasmeen - Smitham"
+        }
+    ]
+}
+```
+
 
 
 ## License
